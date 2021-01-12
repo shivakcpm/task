@@ -1,0 +1,17 @@
+<div class="card-view">
+  <div class="flex-view">
+    <div class="subject">{{ topic.subject }}</div>
+    <div class="inline-flex-ele">
+      <img src="assets/comment.svg" /><span> {{ topic.commentCount }}</span>
+    </div>
+  </div>
+
+  <div class="content">{{ topic.content }}</div>
+  <div class="inline-flex-ele footer">
+      <ng-container *ngIf ="topic.lastCommenter" >
+        <img src="assets/user.svg"/><span class="commentor">{{topic.lastCommenter.name}}</span><span> replied {{ topic.latestCommentTime }}</span>
+      </ng-container>
+       <!-- TODO: Move to separate component -->
+      <div *ngFor="let item of topic.tag" class="tag">{{item.name}}</div>
+</div>
+</div>

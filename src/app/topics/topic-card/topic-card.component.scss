@@ -1,0 +1,43 @@
+.flex-view{
+    display: flex;
+    justify-content: space-between;
+}
+.subject{
+    color:#161a1e;
+    font-weight: 500;
+    font-size:16px;
+}
+
+.content{
+    font-size:14px;
+    color: #6d7884;
+    margin-top:5px;
+}
+.footer{
+    margin-top: 15px;
+}
+.inline-flex-ele{
+    display: inline-flex;
+    font-size: 12px;
+    align-items: center;
+    span{
+        padding: 0px 10px;
+    }
+}
+
+.card-view {
+    border-bottom: 2px solid #f0f4f4;
+    padding: 10px 0;
+}
+
+.commentor{
+  color:  #18bc9c
+}
+
+.tag{
+    background: #eef3f6;
+    border-radius: 4px;
+    color: #72797f;
+    margin: 0px 4px;
+    padding: 2px 5px;
+}

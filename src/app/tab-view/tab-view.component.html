@@ -1,0 +1,3 @@
+<div class="tab-container">
+    <div class= "tab" [ngClass]="{'active':tab===selectedTab}" *ngFor="let tab of tabs" (click)="selectTab(tab)">{{tab.label}}</div>
+</div>

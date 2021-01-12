@@ -1,0 +1,14 @@
+<div class="container">
+    <nav>
+      <img src="assets/logo.PNG"/>
+      <app-tab-view [tabs] = "tabs" (onTabChange) = "changeTab($event)" [defaultTab]="selectedTab"></app-tab-view>
+      <div class="registration">
+        <div class="nav-item">Login</div>
+        <div class="nav-item">Register</div>
+      </div>
+    </nav>
+    <div class="page-title">{{selectedTab.label}}</div>
+</div>
+<div class="router-container">
+  <router-outlet></router-outlet>
+</div>
