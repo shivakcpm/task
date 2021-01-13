@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+##Assumptions
+
+Tag is not added in topics list json but added in topic object, I have added it in topics list also, resolving topic for tags is does not make sense
+
+APIs are not implemented, json files are added in assets and loading in service file, we can replace the url if APIs are available
