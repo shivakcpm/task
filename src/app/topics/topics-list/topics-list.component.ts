@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { TopicsService } from '../topics.service';
 @Component({
@@ -29,6 +29,7 @@ export class TopicsListComponent implements OnInit {
 
   constructor(
     private topicsService: TopicsService,
+    private router:Router,
     private activatedRoute: ActivatedRoute
   ) {}
 
@@ -47,5 +48,8 @@ export class TopicsListComponent implements OnInit {
     .getTopics(this.query,this.selectedTag)
     .subscribe((res: any) => {
       this.topics = res});
+  }
+  createTopic(){
+    this.router.navigate(['forum','create']);
   }
 }

@@ -6,7 +6,7 @@
     ></app-topic-card>
   </div>
   <aside class="side-content">
-      <button class="create-button">Create Thread</button>
+      <button class="create-button" (click)="createTopic()">Create Thread</button>
       <div class="header">Tags</div>
       <ul>
           <li (click) = "selectTag('')" [ngClass]="{'active':selectedTag===''}"> All</li>

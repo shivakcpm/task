@@ -1,13 +1,13 @@
-<div class="card-view">
+<div class="card-view" (click) = "navigateToDetails(topic.id)" [ngClass]="{'suggestion':suggestionMode}">
   <div class="flex-view">
     <div class="subject">{{ topic.subject }}</div>
-    <div class="inline-flex-ele">
+    <div class="inline-flex-ele" *ngIf="!suggestionMode">
       <img src="assets/comment.svg" /><span> {{ topic.commentCount }}</span>
     </div>
   </div>
 
   <div class="content">{{ topic.content }}</div>
-  <div class="inline-flex-ele footer">
+  <div class="inline-flex-ele footer" *ngIf="!suggestionMode">
       <ng-container *ngIf ="topic.lastCommenter" >
         <img src="assets/user.svg"/><span class="commentor">{{topic.lastCommenter.name}}</span><span> replied {{ topic.latestCommentTime }}</span>
       </ng-container>

@@ -1,0 +1,21 @@
+<div class="h-100">
+  <input class="border-line input-field" [readOnly]="!editMode" [(ngModel)]="topic.subject" #subject placeholder="enter the subject" />
+  <div *ngIf="data && editMode" class="auto-complete">
+    <div class="content">
+      <app-topic-card [topic]="item" [suggestionMode] = "true" *ngFor="let item of data"></app-topic-card>
+    </div>
+  </div>
+  <div placeholder="enter/paste the content here "  *ngIf ="editMode" class="border-line input-field description"  [(ngModel)]="topic.content" [contentEditable]="true"></div>
+<div  *ngIf ="!editMode" class="border-line input-field description" >
+{{topic.content}}
+</div>
+
+  <div class="inline-flex-ele w-100 border-line" *ngIf="topic.tag || editMode">
+    <div *ngFor="let item of topic.tag" class="tag">{{item.name}}</div>
+    <input placeholder="tag" *ngIf="editMode" (keyup.enter)="addTag($event)" class="input-field">
+  </div>
+  <div class="align-center" *ngIf="editMode">
+    <button class="create-button">Submit Topic</button>
+  </div>
+ 
+</div>
