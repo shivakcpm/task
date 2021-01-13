@@ -179,7 +179,20 @@
             "photoUrl": null,
             "type": "ENDUSER",
             "label": null
-        }
+        },
+        "tag": [{
+            "name": "marketing",
+            "permalink": "marketing"
+        }, {
+            "name": "sales",
+            "permalink": "sales"
+        }, {
+            "name": "covid 19",
+            "permalink": "covid-19"
+        }, {
+            "name": "corona",
+            "permalink": "corona"
+        }]
     }, {
         "id": "2266000012202685",
         "subject": "With Great Brand Culture Comes Great Employee Advocacy",
@@ -202,7 +215,11 @@
         "likeCount": "0",
         "isVoted": false,
         "categoryId": "2266000012008724",
-        "lastCommenter": null
+        "lastCommenter": null,
+        "tag": [{
+            "name": "marketing",
+            "permalink": "marketing"
+        }]
     }, {
         "id": "2266000012185179",
         "subject": "Cold Calling Is The Primal Fear You Must Overcome To Master Modern Selling",

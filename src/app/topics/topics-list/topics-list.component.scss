@@ -1,10 +1,44 @@
 .flex-content{
     display: flex;
-    flex-direction: column;
     .topics{
         width:70%;
         padding: 0px 10px;
         background-color: #fff;
+    }
+    .create-button{
+        background-color: #18bc9c;
+        border-radius: 4px;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        width: 100%;
+    }
+    .side-content{
+        padding-left: 30px;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+    }
+    .header{
+        margin:10px 0;
+        color:#a2acb6
+    }
+    ul{
+        list-style: none;
+        padding:0;
+        margin: 0;
+        li{
+            cursor: pointer;
+            padding: 5px 10px;
+            margin-top:5px;
+            color:#878f95;
+            &.active{
+                background-color: #fff;
+                font-style: bold;
+                color:#404b55;
+            }
+        }
+        
     }
 
 }

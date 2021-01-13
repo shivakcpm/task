@@ -1,13 +1,20 @@
 <div class="container">
     <nav>
-      <img src="assets/logo.PNG"/>
+      <img class="logo" src="assets/logo.PNG"/>
       <app-tab-view [tabs] = "tabs" (onTabChange) = "changeTab($event)" [defaultTab]="selectedTab"></app-tab-view>
       <div class="registration">
         <div class="nav-item">Login</div>
         <div class="nav-item">Register</div>
       </div>
     </nav>
-    <div class="page-title">{{selectedTab.label}}</div>
+    <div class="page-info">
+      <div class="page-title">{{selectedTab.label}}</div>
+      <div class="position-relative">
+        <img src="assets/search.svg" class="search-icon">
+        <input class="search-bar" (keyup.enter)="search($event)" type="search" placeholder="Search for threads"/>
+      </div>
+
+    </div>
 </div>
 <div class="router-container">
   <router-outlet></router-outlet>

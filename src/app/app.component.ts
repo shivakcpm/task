@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,13 @@ export class AppComponent {
     { label: 'Jobs', value: 'jobs' },
   ];
   selectedTab = this.tabs[0];
+  constructor(private router: Router){
+
+  }
   changeTab(tab){
     this.selectedTab = tab;
+  }
+  search(event){
+    this.router.navigate([this.selectedTab.value],{queryParams:{query:event.target.value}})
   }
 }

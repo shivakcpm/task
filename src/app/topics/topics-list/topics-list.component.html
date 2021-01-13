@@ -5,5 +5,14 @@
       [topic]="topic"
     ></app-topic-card>
   </div>
-  <aside></aside>
+  <aside class="side-content">
+      <button class="create-button">Create Thread</button>
+      <div class="header">Tags</div>
+      <ul>
+          <li (click) = "selectTag('')" [ngClass]="{'active':selectedTag===''}"> All</li>
+          <li *ngFor="let tag of tags" [ngClass]="{'active':selectedTag===tag.permalink}" (click) = "selectTag(tag.permalink)">
+              {{tag.name}}
+          </li>
+      </ul>
+  </aside>
 </div>
